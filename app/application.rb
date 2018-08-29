@@ -8,6 +8,7 @@ class Application
     if req.path=="/items/"
       item_to_add = req.params["item"]
         if @@item.include?(item_to_add)
+          item_to_add.price
       #resp.write "You requested the items"
     else
       resp.write "Route not found"
