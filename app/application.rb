@@ -5,10 +5,10 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path=="/items/"
-      item_to_add = req.params["item"]
-      @@item.include?(item_to_add)
-          item_to_add.price
+    if req.path.match(/items/)
+      item_name = req.path.split("/items/").last
+        if item =@@items.find{|i| i.name == item_name}
+          resp.write item.price
 
     else
       resp.write "Route not found"
