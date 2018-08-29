@@ -9,7 +9,7 @@ class Application
       item_to_add = req.params["item"]
       @@item.include?(item_to_add)
           item_to_add.price
-      resp.status = 200
+      
     else
       resp.write "Route not found"
       resp.status = 404
