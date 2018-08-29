@@ -11,7 +11,7 @@ class Application
           item_to_add.price
       #resp.write "You requested the items"
     else
-      resp.write "Route not found"
+      resp.write "Item not found"
       resp.status = 404
     end
 
