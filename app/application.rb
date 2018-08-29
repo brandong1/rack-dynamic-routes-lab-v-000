@@ -7,7 +7,7 @@ class Application
 
     if req.path=="/items/"
       item_to_add = req.params["item"]
-    elsif @@item.include?(item_to_add)
+      @@item.include?(item_to_add)
           item_to_add.price
       #resp.write "You requested the items"
     else
